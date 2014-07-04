@@ -1,0 +1,8 @@
+{
+  "name": "Lesson 10",
+  "version": "1.0.0",
+  "dependencies": {
+    "mixitup": "https://github.com/patrickkunka/mixitup.git",
+    "normalize-css": "latest"
+  }
+}

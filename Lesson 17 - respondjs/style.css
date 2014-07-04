@@ -1,0 +1,25 @@
+.container {
+	width: 80%;
+	margin: 2em auto;
+}
+
+/* Smartphone */
+@media only screen and (max-width: 767px) {
+	body {
+		background-color: red;
+	}
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	body {
+		background-color: blue;
+	}
+}
+
+/* Desktops */
+@media only screen and (min-width: 1025px) {
+	body {
+		background-color: green;
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Lesson 13",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery-waypoints": "latest"
+  }
+}

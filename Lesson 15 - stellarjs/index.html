@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 15 - Stellar.js</title>
+
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.demo-section {
+			width: 100%;
+			height: 600px;
+			padding: 5em;
+			background-size: 100%;
+
+			position: relative;
+		}
+
+			.demo-section h1,
+			.demo-section p {
+				color: #fff;
+			} 
+
+		#demo-section-1 {
+			background: transparent url( images/bg-1.jpg ) 0 0 no-repeat;
+		}
+
+		#demo-section-2 {
+			background: transparent url( images/bg-2.jpg ) 0 0 no-repeat;
+		}
+
+		#demo-section-3 {
+			background: transparent url( images/bg-3.png );
+		}
+
+			#demo-section-3 img {
+				position: absolute;
+				width: 30%;
+				height: auto;
+			}
+
+			#demo-section-3 img:first-child {
+				left: 0;
+			}
+
+			#demo-section-3 img:last-child {
+				left: 700px;
+			}
+
+		#demo-section-4 {
+			background: transparent url( images/bg-4.png );
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<div class="demo-section" id="demo-section-1" data-stellar-background-ratio="2.5">
+		<h1>Section 1</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus possimus praesentium amet dolore debitis quaerat rem incidunt sit culpa ipsam!</p>
+	</div>
+
+	<div class="demo-section" id="demo-section-2" data-stellar-background-ratio="0.5">
+		<h1>Section 2</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus possimus praesentium amet dolore debitis quaerat rem incidunt sit culpa ipsam!</p>
+	</div>
+	
+	<div class="demo-section" id="demo-section-3" data-stellar-background-ratio="1.5">
+		<h1>Section 3</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus possimus praesentium amet dolore debitis quaerat rem incidunt sit culpa ipsam!</p>
+
+		<img src="images/img-1.jpg" alt="Image" data-stellar-ratio="1.5" data-stellar-vertical-offset="-50">
+		<img src="images/img-2.jpg" alt="Image" data-stellar-ratio="2.5" data-stellar-vertical-offset="-50">
+	</div>
+
+	<div class="demo-section" id="demo-section-4" data-stellar-background-ratio="0">
+		<h1>Section 4</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus possimus praesentium amet dolore debitis quaerat rem incidunt sit culpa ipsam!</p>
+	</div>
+
+
+	<!-- Add Bower components -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery.stellar/jquery.stellar.min.js"></script>
+
+	<script>
+		$( function() {
+			$( window ).stellar();
+		} );
+	</script>
+
+</body>
+</html>

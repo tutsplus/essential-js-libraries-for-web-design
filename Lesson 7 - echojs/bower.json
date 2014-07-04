@@ -1,0 +1,7 @@
+{
+  "name": "Lesson 7",
+  "version": "1.0.0",
+  "dependencies": {
+	"echojs": "latest"
+  }
+}

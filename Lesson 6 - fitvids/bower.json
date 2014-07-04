@@ -1,0 +1,7 @@
+{
+  "name": "Lesson 6",
+  "version": "1.0.0",
+  "dependencies": {
+  	"fitvids": "latest"
+  }
+}

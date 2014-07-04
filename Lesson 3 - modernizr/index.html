@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 3 - Modernizr</title>
+
+	<style>
+		.demo-image {
+			-webkit-box-reflect: below;
+		}
+
+		.no-cssreflections .demo-image {
+			border-radius: 15px;
+		}
+	</style>
+
+	<!-- Add Modernizr -->
+	<!-- // <script src="bower_components/modernizr/modernizr.js"></script> -->
+	<script src="modernizr.custom.js"></script>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<img src="images/demo-image.jpg" alt="Demo image" class="demo-image">
+
+	<script>
+		if ( ! Modernizr.cssreflections ) {
+			alert( "Hey, reflections are not supported!" );
+		}
+
+		Modernizr.load( {
+			test: Modernizr.cssreflections,
+			nope: 'reflections.js'
+		} );
+
+	</script>
+	
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Lesson 12",
+  "version": "1.0.0",
+  "dependencies": {
+  	"superfish": "latest"
+  }
+}

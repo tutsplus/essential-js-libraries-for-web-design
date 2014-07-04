@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 4 - jQuery Validation</title>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<form action="" id="contact-form" novalidate>
+		<fieldset>
+			<legend>To send us a message, please fill in the fields below.</legend>
+
+			<p>
+				<label for="name">Name (required, at least 2 characters)</label>
+				<input type="text" name="name" id="name">
+			</p>
+
+			<p>
+				<label for="email">Email (required)</label>
+				<input type="email" name="email" id="email">
+			</p>
+
+			<p>
+				<label for="website">Website</label>
+				<input type="url" name="website" id="website">
+			</p>
+
+			<p>
+				<label for="message">Message (required)</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			</p>
+
+			<p>
+				<input type="submit" value="Send Message">
+			</p>
+		</fieldset>
+	</form>
+	
+
+	<!-- Add Bower components -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery.validation/dist/jquery.validate.min.js"></script>
+
+	<script>
+		$( function() {
+			$( "#contact-form" ).validate( {
+				rules: {
+					name: {
+						required: true,
+						minlength: 3
+					},
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				messages: {
+					name: {
+						required: "Your name is mandatory",
+						minlength: $.validator.format( "Your name must have at least {0} characters." )
+					},
+					email: {
+						required: "Need an email address",
+						email: "The email address must be valid"
+					}
+				},
+				onsubmit: true,
+				errorClass: "bad-field",
+				validClass: "good-field",
+				errorElement: "span"
+			} );
+		} );
+	</script>
+
+</body>
+</html>

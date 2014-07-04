@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 8 - Cycle2</title>
+
+	<style>
+		.cycle-pager span {
+			font-size: 40px;
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			color: #ccc;
+		}
+
+		.cycle-pager span.cycle-pager-active {
+			color: red;
+		}
+
+		.cycle-pager > * {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<h4>Simple image slideshow</h4>
+	<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="15000" data-cycle-caption-template="Slide no. {{slideNum}} of {{slideCount}} - {{cycleTitle}}" data-cycle-caption=".slider-caption">
+		<div class="cycle-caption"></div>
+
+		<img src="images/img-1.jpg" alt="Slider image 1" data-cycle-title="First image">
+		<img src="images/img-2.jpg" alt="Slider image 2" data-cycle-title="Second image">
+		<img src="images/img-3.jpg" alt="Slider image 3" data-cycle-title="Third image">
+		<img src="images/img-4.jpg" alt="Slider image 4" data-cycle-title="Fourth image">
+	</div>
+	
+	<div class="slider-caption"></div>
+
+	<hr>
+
+	<h4>Continuous slideshow</h4>
+	<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="1" data-cycle-speed="15000" data-cycle-easing="linear">
+		<img src="images/img-1.jpg" alt="Slider image 1">
+		<img src="images/img-2.jpg" alt="Slider image 2">
+		<img src="images/img-3.jpg" alt="Slider image 3">
+		<img src="images/img-4.jpg" alt="Slider image 4">
+	</div>
+
+	<hr>
+
+	<h4>Slideshow with pager</h4>
+	<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="3000" data-cycle-pager-template="<a href=#><img src='{{src}}' width='20' height='20'></a>">
+		<div class="cycle-pager"></div>
+
+		<img src="images/img-1.jpg" alt="Slider image 1">
+		<img src="images/img-2.jpg" alt="Slider image 2">
+		<img src="images/img-3.jpg" alt="Slider image 3">
+		<img src="images/img-4.jpg" alt="Slider image 4">
+	</div>
+
+	<hr>
+
+	<h4>Manual slideshow</h4>
+	<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="1000" data-cycle-slides="> div">
+		<div>
+			<img src="images/img-1.jpg" alt="Image 1">
+			<p>This is an image description</p>
+		</div>
+		<div>
+			<img src="images/img-2.jpg" alt="Image 2">
+			<p>This is an image description</p>
+		</div>
+		<div>
+			<img src="images/img-3.jpg" alt="Image 3">
+			<p>This is an image description</p>
+		</div>
+		<div>
+			<img src="images/img-4.jpg" alt="Image 4">
+			<p>This is an image description</p>
+		</div>
+	</div>
+
+
+
+	<!-- Add Bower components -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
+
+</body>
+</html>

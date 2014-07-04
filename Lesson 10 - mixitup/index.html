@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 10 - MixItUp</title>
+
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.container {
+			width: 75%;
+			margin: 5em auto;
+		}
+
+		.mix {
+			display: none;
+			text-align: center;
+			width: 23%;
+			margin: 1em 1%;
+			background-color: #ccc;
+		}
+
+		.blue {
+			background-color: blue;
+			color: #fff;
+		}
+
+		.orange {
+			background-color: orange;
+		}
+
+		.black {
+			background-color: #000;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<div class="container">
+		<button class="filter" data-filter="all">All</button>
+		<button class="filter" data-filter=".blue">Blue</button>
+		<button class="filter" data-filter=".orange">Orange</button>
+		<button class="filter" data-filter=".black">Black</button>
+
+		<button class="sort" data-sort="custom-order:asc">Ascending order</button>
+		<button class="sort" data-sort="custom-order:desc">Descending order</button>
+		<button class="sort" data-sort="random">Random</button>
+
+		<hr>
+
+		<label>Filter:</label>
+
+		<select id="filter-select">
+			<option value="all">All</option>
+			<option value=".blue">Blue</option>
+			<option value=".orange">Orange</option>
+			<option value=".black">Black</option>
+		</select>
+
+		<label>Sort:</label>
+
+		<select id="sort-select">
+			<option value="custom-order:asc">Asc</option>
+			<option value="custom-order:desc">Desc</option>
+			<option value="random">Random</option>
+		</select>
+
+
+		<div class="mix blue" data-custom-order="1">
+			<h5>Box 1</h5>
+			<h6>Blue</h6>
+		</div>
+		<div class="mix orange" data-custom-order="2">
+			<h5>Box 2</h5>
+			<h6>Orange</h6>
+		</div>
+		<div class="mix blue" data-custom-order="3">
+			<h5>Box 3</h5>
+			<h6>Blue</h6>
+		</div>
+		<div class="mix orange" data-custom-order="4">
+			<h5>Box 4</h5>
+			<h6>Orange</h6>
+		</div>
+		<div class="mix orange" data-custom-order="5">
+			<h5>Box 5</h5>
+			<h6>Orange</h6>
+		</div>
+		<div class="mix black" data-custom-order="6">
+			<h5>Box 6</h5>
+			<h6>Black</h6>
+		</div>
+	</div>
+
+	<!-- Add Bower components -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/mixitup/src/jquery.mixitup.js"></script>
+
+	<script>
+		$( function() {
+			$( ".container" ).mixItUp( {
+				animation: {
+					duration: 550,
+					effects: 'fade translateZ(-360px) stagger(34ms) rotateX(20deg) rotateY(20deg)',
+					easing: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)'
+				},
+				layout: {
+					display: 'block',
+					containerClass: 'master-container'
+				},
+				selectors: {
+					target: '.mix',
+					filter: '.filter',
+					sort: '.sort'
+				}
+			} );
+
+			$( "#filter-select" ).on( "change", function() {
+				$( ".container" ).mixItUp( 'filter', this.value );
+			} );
+
+			$( "#sort-select" ).on( "change", function() {
+				$( ".container" ).mixItUp( 'sort', this.value );
+			} );
+		} );
+	</script>
+
+</body>
+</html>

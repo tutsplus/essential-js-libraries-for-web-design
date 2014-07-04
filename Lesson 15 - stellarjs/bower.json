@@ -1,0 +1,8 @@
+{
+  "name": "Lesson 15",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery.stellar": "latest",
+    "normalize-css": "~3.0.1"
+  }
+}

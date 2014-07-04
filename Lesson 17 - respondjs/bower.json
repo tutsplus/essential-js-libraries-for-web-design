@@ -1,0 +1,7 @@
+{
+  "name": "Lesson 17",
+  "version": "1.0.0",
+  "dependencies": {
+    "respond": "latest"
+  }
+}

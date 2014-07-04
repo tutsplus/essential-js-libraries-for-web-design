@@ -1,0 +1,1 @@
+alert( "Hey, this is an alternate script!" );

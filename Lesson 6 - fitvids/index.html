@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 6 - FitVids.js</title>
+
+	<style>
+		.container,
+		.container-2 {
+			width: 75%;
+			margin: 3em auto;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<div class="container">
+		<iframe width="560" height="315" src="http://www.youtube.com/embed/SZEflIVnhH8" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	<div class="container-2">
+		<iframe src="http://player.vimeo.com/video/23534361" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/23534361">The Animated Envato Community Podcast</a> from <a href="http://vimeo.com/activetuts">Activetuts+</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+	</div>
+
+	<div class="container">
+		<iframe src="http://demo-video-site.com" frameborder="0" allowfullscreen id="custom"></iframe>
+	</div>
+	
+
+	<!-- Add Bower components -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/fitvids/jquery.fitvids.js"></script>
+
+	<script>
+		$( function() {
+			$( ".container, .container-2" ).fitVids( {
+				customSelector: "iframe[src^='http://demo-video-site.com']"
+			} );
+		} );
+	</script>
+
+</body>
+</html>

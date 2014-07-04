@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 12 - jQuery Superfish</title>
+
+	<link rel="stylesheet" href="bower_components/superfish/dist/css/superfish.css">
+</head>
+<body>
+
+	<!-- Demo content -->
+	<nav>
+		<ul class="sf-menu">
+			<li><a href="">First item</a></li>
+			<li>
+				<a href="">Second item</a>
+				<ul>
+					<li><a href="">Submenu item 1</a></li>
+					<li>
+						<a href="">Submenu item 2</a>
+						<ul>
+							<li><a href="">Another submenu 1</a></li>
+							<li><a href="">Another submenu 2</a></li>
+							<li>
+								<a href="">Another submenu 3</a>
+								<ul>
+									<li><a href="">Another submenu 1</a></li>
+									<li><a href="">Another submenu 2</a></li>
+									<li><a href="">Another submenu 3</a></li>
+									<li><a href="">Another submenu 4</a></li>
+									<li><a href="">Another submenu 5</a></li>
+								</ul>
+							</li>
+							<li><a href="">Another submenu 4</a></li>
+							<li><a href="">Another submenu 5</a></li>
+						</ul>
+					</li>
+					<li><a href="">Submenu item 3</a></li>
+				</ul>
+			</li>
+			<li><a href="">Third Item</a></li>
+			<li>
+				<a href="">Mega Menu</a>
+				<div class="sf-mega">
+					<h3>This is a mega menu</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum, voluptatibus autem enim quas, et sit saepe doloribus! Ipsa delectus ab, commodi accusantium quibusdam fugit, unde sunt asperiores, nam expedita nobis, sequi assumenda nesciunt minima odio quia. Sed labore provident dignissimos totam, obcaecati facere, corporis, ipsa nesciunt, minus veniam debitis.</p>
+				</div>
+			</li>
+			<li>
+				<a href="">Mega Menu 2</a>
+				<div class="sf-mega">
+					<div class="sf-mega-section">
+						<h3>This is a mega menu</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum, voluptatibus autem enim quas, et sit saepe doloribus! Ipsa delectus ab, commodi accusantium quibusdam fugit, unde sunt asperiores, nam expedita nobis, sequi assumenda nesciunt minima odio quia. Sed labore provident dignissimos totam, obcaecati facere, corporis, ipsa nesciunt, minus veniam debitis.</p>
+					</div>
+					<div class="sf-mega-section">
+						<h3>This is a mega menu</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum, voluptatibus autem enim quas, et sit saepe doloribus! Ipsa delectus ab, commodi accusantium quibusdam fugit, unde sunt asperiores, nam expedita nobis, sequi assumenda nesciunt minima odio quia. Sed labore provident dignissimos totam, obcaecati facere, corporis, ipsa nesciunt, minus veniam debitis.</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	
+
+	<!-- Add Bower components -->
+	<script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/superfish/dist/js/superfish.min.js"></script>
+	<script src="bower_components/superfish/dist/js/hoverIntent.js"></script>
+
+	<script>
+		$( function() {
+			var menuOptions = {
+				popUpSelector: 'ul, .sf-mega',
+				hoverClass: 'sfHover',
+				delay: 100,
+				cssArrows: true
+			};
+
+			$( ".sf-menu" ).superfish( menuOptions );
+		} );
+	</script>
+
+</body>
+</html>
